@@ -2,8 +2,6 @@
 <html>
 <head>
     <title>میزبان GoldHEN برای PS4 فریمور 9.00</title>
-    <script src="payload.js"></script>
-    <script type='module' src='alert.mjs'></script>
     <style>
         body {
             background-color: #1a1a1a;
@@ -15,6 +13,34 @@
             color: #f31414;
         }
     </style>
+    <script>
+        fetch('./payload.bin').then(res => {
+            res.arrayBuffer().then(arr => {
+                window.pld = new Uint32Array(arr);
+            })
+        })
+    </script>
+    <script type='module'>
+        addEventListener('unhandledrejection', event => {
+            const reason = event.reason;
+            alert(
+                'Unhandled rejection\n'
+                + `${reason}\n`
+                + `${reason.sourceURL}:${reason.line}:${reason.column}\n`
+                + `${reason.stack}`
+            );
+        });
+        addEventListener('error', event => {
+            const reason = event.error;
+            alert(
+                'Unhandled error\n'
+                + `${reason}\n`
+                + `${reason.sourceURL}:${reason.line}:${reason.column}\n`
+                + `${reason.stack}`
+            );
+            return true;
+        });
+    </script>
 </head>
 <body>
     <pre id='console'></pre>
