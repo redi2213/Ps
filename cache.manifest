@@ -3,14 +3,12 @@ CACHE MANIFEST
 CACHE:
 alert.mjs
 config.mjs
-img.jpg
 lapse.mjs
 main.html
 payload.bin
 payload.js
 psfree.mjs
 send.mjs
-style.css
 kpatch\900.elf
 module\chain.mjs
 module\constants.mjs
