@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="fa">
-
 <head>
   <meta charset="UTF-8">
   <title>کپی خور PS4</title>
   <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-    height: 100%;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-</style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: linear-gradient(to bottom, #000000, #1c1c1c);
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 20px 0;
+    }
+
+    #msgs {
+      font-size: 24px;
+      margin: 40px 0;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 18px;
+      color: #ccc;
+    }
+  </style>
+
+  <!-- این‌ها اسکریپت‌های خارجی هستند -->
   <script src="payload.js"></script>
-  <script type='module' src='alert.mjs'></script>
+  <script type="module" src="alert.mjs"></script>
 </head>
 
 <body>
-  <pre id='console'></pre>
   <h1>کپی خور PS4</h1>
-  <hr>
-  <br>
-  <h1 id="msgs" style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">
-    لطفاً صبر کنید...
-  </h1>
-
-  <h3 style="text-align: center; margin-top: 100px;">تهیه شده توسط محمودی</h3>
+  <hr style="width: 80%; border-color: #555;">
+  <h1 id="msgs">لطفاً صبر کنید...</h1>
+  
+  <footer>تهیه شده توسط محمودی</footer>
 </body>
-
 </html>
